@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "llama2-chatbot"
+version = "0.1.0"
+description = "Experimental Streamlit chatbot app built for LLaMA2 (or any other LLM)"
+authors = ["alex00pep <alexmtnezf@gmail.com>"]
+license = "Apache2"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit-chat = "^0.1.1"
+streamlit = "^1.26.0"
+replicate = "^0.13.0"
+python-dotenv = "^1.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

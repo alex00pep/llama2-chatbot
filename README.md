@@ -1,8 +1,6 @@
 #  LLaMA 2 Chatbot App ⚡
  ![image](llama-logo.png)
 
-[![Develop in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/alex00pep/llama2-chatbot?quickstart=1)
-
 ## 🤔 What is this?
 
 This is an experimental Streamlit chatbot app built for LLaMA2 (or any other LLM). The app includes session chat history and provides an option to select multiple LLaMA2 API endpoints on Replicate.
@@ -23,8 +21,14 @@ For the LLaMA2 license agreement, please check the Meta Platforms, Inc official 
 - Each model (7B, 13B & 70B) runs on Replicate - (7B and 13B run on one A100 40Gb, and 70B runs on one A100 80Gb).
 - Docker image included to deploy this app in Fly.io
 
-## Installation
+## 👨‍💻 Development
 
+[Recommended] Cloud IDE with GitHub Codespaces
+
+[![Develop in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/alex00pep/llama2-chatbot?quickstart=1)
+
+
+But if you prefer local developement
 - Clone the repository
 - [Recommended] Create a virtual python environment with the command `python -m venv .venv` and activate it with `source .venv/bin/activate`
 - Install dependencies with `pip install -r requirements.txt`
@@ -58,8 +62,6 @@ Here's a table of the main libraries used in this project:
 | `os`                  |         | Operating system related utilities                   |
 | `streamlit`           |         | Python Library to build and share web and AI/ML apps |
 
-
-
 ## Deploying on fly.io
 1. First you should [install flyctl](https://fly.io/docs/hands-on/install-flyctl/) and login from command line
 2. `fly launch` -> this will generate a fly.toml for you automatically
@@ -72,15 +74,7 @@ Here's a table of the main libraries used in this project:
 
 ## 📝 License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-This project is under development. Contributions are welcome!
-
-## License
-
-- Web chatbot license (this repo): Apache 2.0
+- This project is licensed under the Apache 2 License. See the [LICENSE](LICENSE) file for details.
 - For the LLaMA models license, please refer to the License Agreement from Meta Platforms, Inc.
 
 ## Acknowledgements

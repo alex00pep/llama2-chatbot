@@ -9,7 +9,7 @@ Author: Alexander Martinez Fajardo
 Created: September 2023
 Version: 0.1.0 (Experimental)
 Status: Development
-Python version: 3.11.2
+Python version: 3.10
 
 """
 # External libraries:
@@ -30,9 +30,7 @@ PRE_PROMPT = "You are a helpful assistant. You do not respond as 'User' or prete
 
 
 if not (
-    REPLICATE_API_TOKEN
-    and REPLICATE_MODEL_ENDPOINT13B
-    and REPLICATE_MODEL_ENDPOINT7B
+    REPLICATE_API_TOKEN and REPLICATE_MODEL_ENDPOINT13B and REPLICATE_MODEL_ENDPOINT7B
 ):
     st.warning(
         "Add a `.env` file to your app directory with the keys specified in `.env_template` to continue."
