@@ -1,6 +1,6 @@
 # LLaMA 2 Chatbot App ⚡
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/a16z-infra/llama2-chatbot?quickstart=1)
+[![Develop in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/alex00pep/llama2-chatbot?quickstart=1)
 
 ## 🤔 What is this?
 
@@ -25,19 +25,11 @@ For the LLaMA2 license agreement, please check the Meta Platforms, Inc official 
 ## Installation
 
 - Clone the repository
-- [Optional] Create a virtual python environment with the command `python -m venv .venv` and activate it with `source .venv/bin/activate`
+- [Recommended] Create a virtual python environment with the command `python -m venv .venv` and activate it with `source .venv/bin/activate`
 - Install dependencies with `pip install -r requirements.txt`
 - Create an account on [Replicate](https://replicate.com/)
-- Create an account on [Auth0 (free)](https://auth0.com/) and configure your application
-    - Create a Single Page Application
-    - Navigate to the Settings tab for that application
-    - If you are running the app locally: set Allowed Web Origins to `http://localhost:8501` and set Allowed Callback URLs to `http://localhost:8501/component/auth0_component.login_button/index.html`
-    - To run on a remote server: set Allowed Web Origins to `https://<your_domain>` and set Allowed Callback URLs to `http://<your_domain>/component/auth0_component.login_button/index.html`
-    - Copy Client ID and Domain to use in the next step
 - Make your own `.env` file with the command `cp .env_template .env`. Then edit the `.env` file and add your:
     - [Replicate API token](https://replicate.com/account) as `REPLICATE_API_TOKEN`
-    - [Auth0 Client ID](https://auth0.com/docs/get-started/applications/application-settings) as `AUTH0_CLIENTID`
-    - [Auth0 Domain](https://auth0.com/docs/get-started/applications/application-settings) as `AUTH0_DOMAIN`
     - For your convenience, we include common model endpoints already in the `.env_template` file
 - Run the app with `streamlit run llama2_chatbot.py`
 - Dockerfile included to [deploy this app](#deploying-on-flyio) in Fly.io
@@ -50,6 +42,19 @@ For the LLaMA2 license agreement, please check the Meta Platforms, Inc official 
 - Configure model hyperparameters from the sidebar.
 - Type your question in the input field at the bottom of the app and press enter.
 
+
+## 🛠️ Libraries Used
+
+Here's a table of the main libraries used in this project:
+
+| Library               | Version | Description                                          |
+| --------------------- | ------- | ---------------------------------------------------- |
+| `replicate`           |         | Library for interacting with Replicate               |
+| `os`                  |         | Operating system related utilities                   |
+| `streamlit`           |         | Python Library to build and share web and AI/ML apps |
+
+
+
 ## Deploying on fly.io
 1. First you should [install flyctl](https://fly.io/docs/hands-on/install-flyctl/) and login from command line
 2. `fly launch` -> this will generate a fly.toml for you automatically
@@ -58,15 +63,11 @@ For the LLaMA2 license agreement, please check the Meta Platforms, Inc official 
 
 ## Authors
 
-- Marco Mascorro - [@mascobot](https://twitter.com/Mascobot)
-- Yoko Li - [@stuffyokodraws](https://twitter.com/stuffyokodraws)
-- Rajko Radovanović - [@rajko_rad](https://twitter.com/rajko_rad)
-- Matt Bornstein - [@BornsteinMatt](https://twitter.com/BornsteinMatt)
-- Guido Appenzeller - [@appenz](https://twitter.com/appenz)
+- Alexander Martinez Fajardo - [alex00pep](https://github.com/alex00pep)
 
-## Version
+## 📝 License
 
-0.9.0 (Experimental) - July 2023
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
