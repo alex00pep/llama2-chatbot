@@ -14,7 +14,6 @@ Python version: 3.11.2
 """
 # External libraries:
 import os
-import replicate
 import streamlit as st
 from dotenv import load_dotenv
 from utils import debounce_replicate_run

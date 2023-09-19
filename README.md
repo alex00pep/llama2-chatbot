@@ -1,4 +1,5 @@
-# LLaMA 2 Chatbot App ⚡
+#  LLaMA 2 Chatbot App ⚡
+ ![image](llama-logo.png)
 
 [![Develop in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/alex00pep/llama2-chatbot?quickstart=1)
 
@@ -32,7 +33,11 @@ For the LLaMA2 license agreement, please check the Meta Platforms, Inc official 
     - [Replicate API token](https://replicate.com/account) as `REPLICATE_API_TOKEN`
     - For your convenience, we include common model endpoints already in the `.env_template` file
 - Run the app with `streamlit run llama2_chatbot.py`
-- Dockerfile included to [deploy this app](#deploying-on-flyio) in Fly.io
+- Dockerfile included to [deploy this app](#deploying-on-flyio) in Fly.io or run Docker locally with:
+    ```
+    docker build -t llama2-chatbot .
+    docker run -d -p 80:8080 llama2-chatbot
+    ```
 
 (Note: if you are using a Mac, you may need to use the command `python3` instead of `python` and `pip3` instead of `pip`)
 
