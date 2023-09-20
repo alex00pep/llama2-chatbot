@@ -12,6 +12,7 @@ streamlit-chat = "^0.1.1"
 streamlit = "^1.26.0"
 replicate = "^0.13.0"
 python-dotenv = "^1.0.0"
+langchain = "^0.0.295"
 
 
 [tool.poetry.group.dev.dependencies]

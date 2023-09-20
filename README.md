@@ -37,7 +37,10 @@ But if you prefer local developement
     - [Replicate API token](https://replicate.com/account) as `REPLICATE_API_TOKEN`
     - For your convenience, we include common model endpoints already in the `.env_template` file
 - Run the app with `streamlit run llama2_chatbot.py`
-- Dockerfile included to [deploy this app](#deploying-on-flyio) in Fly.io or run Docker locally with:
+
+
+## 🐳 Running with Docker
+- Dockerfile included to [deploy this app](#deploying-on-flyio) in Fly.io or run  locally with:
     ```
     docker build -t llama2-chatbot .
     docker run -d -p 80:8080 llama2-chatbot
@@ -45,7 +48,7 @@ But if you prefer local developement
 
 (Note: if you are using a Mac, you may need to use the command `python3` instead of `python` and `pip3` instead of `pip`)
 
-## Usage
+## 🚀 Usage
 
 - Start the chatbot by selecting an API endpoint from the sidebar.
 - Configure model hyperparameters from the sidebar.
@@ -61,16 +64,22 @@ Here's a table of the main libraries used in this project:
 | `replicate`           |         | Library for interacting with Replicate               |
 | `os`                  |         | Operating system related utilities                   |
 | `streamlit`           |         | Python Library to build and share web and AI/ML apps |
+| `langchain`           |         | Python framework to create LLM chains                  |
 
 ## Deploying on fly.io
 1. First you should [install flyctl](https://fly.io/docs/hands-on/install-flyctl/) and login from command line
 2. `fly launch` -> this will generate a fly.toml for you automatically
 3. `fly deploy --dockerfile Dockerfile` --> this will automatically package up the repo and deploy it on fly. If you have a free account, you can use `--ha=false` flag to only spin up one instance
-4. Go to your deployed fly app dashboard, click on `Secrets` from the left hand side nav, and click on `Use the Web CLI to manage your secrets without leaving your browser`. Once you are on your app's web CLI, export all secrets needed. i.e `export REPLICATE_API_TOKEN=your_replicate_token`. Refer to .env.example file for necessary secrets. 
+4. Go to your deployed fly app dashboard, click on `Secrets` from the left hand side nav, and click on `Use the Web CLI to manage your secrets without leaving your browser`. Once you are on your app's web CLI, export all secrets needed. i.e `export REPLICATE_API_TOKEN=your_replicate_token`. Refer to .env.example file for necessary secrets.
 
 ## Authors
 
-- Alexander Martinez Fajardo - [alex00pep](https://github.com/alex00pep)
+- Marco Mascorro - [@mascobot](https://twitter.com/Mascobot)
+- Yoko Li - [@stuffyokodraws](https://twitter.com/stuffyokodraws)
+- Rajko Radovanović - [@rajko_rad](https://twitter.com/rajko_rad)
+- Matt Bornstein - [@BornsteinMatt](https://twitter.com/BornsteinMatt)
+- Guido Appenzeller - [@appenz](https://twitter.com/appenz)
+
 
 ## 📝 License
 
